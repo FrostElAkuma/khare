@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family:sans-serif;
+}
+
+.noClick {
+    pointer-events: none;
+   cursor: default;
+}
+
+.none {
+    display:none;
+}
+
+.card {
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.hid {
+    display: none;
+}
+
+.social {
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.nav-item{
+    transition: 0.5s;
+}
+
+.nav-item:hover {
+    transform: scale(1.03);
+}
+
+.fa {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.fa:hover {
+    transform: scale(1.1);
+}

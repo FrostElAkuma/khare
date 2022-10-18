@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--We took in class what do these meta tags do-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Our style sheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Our main Js file-->
+    <script src="main.js"></script>
+
+    <!--Importing Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Importing Jquery for our show more fade in-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Importing icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Master Web Dev Final Project</title>
+</head>
+<body>
+
+    <div id="success-alert" class="alert alert-success fixed-top none" role="alert"></div>
+    <div id="fail-alert" class="alert alert-danger fixed-top none" role="alert"></div>
+
+
+    <!-- NavBar Section-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!--We used the Ai bot midjourney to generate this logo-->
+          <a class="navbar-brand noClick" href="#">
+            <img src="logo.png" alt="" width="40" height="36">
+          </a>
+          <a class="navbar-brand noClick translate1" href="#">Khare</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active translate2" aria-current="page" href="index.html">Donation</a>
+              <a class="nav-link translate3" href="Volunteer.html">Volunteer</a>
+              <a class="nav-link translate4" href="Environment.html">Environment</a>
+              <a class="nav-link disabled translateX" href="#" tabindex="-1" aria-disabled="true">More Coming Soon..</a>
+            </div>
+          </div>
+        </div>
+        <!--Our Language Change Button-->
+        <form class="d-flex" style="margin-right: 10px;">
+          <!--We did type ="button" because the usual type="submit" will refresh the page and the arabic will be gone-->
+          <button class="btn btn-outline-success btnAr" type="button" onclick = "Arabic1();">عربي</button>
+        </form>
+      </nav>
+
+      <!--Welcome Section-->
+      <section id="welcome-section" >
+        <img src="https://img.freepik.com/premium-photo/hands-holding-red-heart-blue-background_49149-917.jpg?w=2000"  alt="Welcome Image" style="width: 100vw; height: 75vh;">
+      </section>
+
+      <!--Main Content Section-->
+      
+      <h1 class="translate5" style="text-align: center; margin-top:10px;">Do Khare All in One Place</h1>
+      <br>
+      <h3 class="translate6" style="text-align: center; margin-top:10px;">Your name is Synonymous with generosity</h3>
+
+      <!--We are using in line styling to override some bootstrap styling-->
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 main" style="margin-left: 17em; margin-right: 17em; margin-top: 40px;">
+        
+        <!--This is our card code-->
+        <div class="col">
+          <div class="card">
+            <!--Image for the card-->
+            <img src="https://compassionwithoutborders.files.wordpress.com/2016/04/feeding_the_homeless_810_500_55_s_c1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title translate7">Feed the poor</h5>
+              <p class="card-text translate8">Help end world hunger with as low as 1 AED Only</p>
+              <div style="text-align: center;">
+                <label for="amount" class="col-form-label translate9" style="display: inline-block;">Donation amount</label>
+                <input type="number" class="form-control amount" name="amount" min="1" max="100000" style="width: 5em; margin-left: 10px; margin-bottom: 10px; display: inline-block;">
+                <button type="submit" id="c1" class="btn btn-primary btn1 translate10" style="vertical-align: top;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2021/07/drinkingwater-1627295738.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title translate11">Providing drinking water</h5>
+              <p class="card-text translate12">Providing clean drinking water is ine of the best charities. Donate now with as low as 1 AED</p>
+              <div style="text-align: center;">
+                <label for="amount" class="col-form-label translate9" style="display: inline-block;">Donation amount</label>
+                <input type="number" class="form-control amount" name="amount" min="1" max="100000" style="width: 5em; margin-left: 10px; margin-bottom: 10px; display: inline-block;">
+                <button type="submit" id="c2" class="btn btn-primary btn1 translate10" style="vertical-align: top;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hid">
+          <div class="card">
+            <img src="https://www.atheer.om/wp-content/uploads/2021/02/20210221_130329.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title translate13">Help Build a mosque</h5>
+              <p class="card-text translate14">You can contribute only 1 AED to build a mosque
+              </p>
+              <div style="text-align: center;">
+                <label for="amount" class="col-form-label translate9" style="display: inline-block;">Donation amount</label>
+                <input type="number" class="form-control amount" name="amount" min="1" max="100000" style="width: 5em; margin-left: 10px; margin-bottom: 10px; display: inline-block;">
+                <button type="submit" id="c3" class="btn btn-primary btn1 translate10" style="vertical-align: top;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col hid">
+          <div class="card">
+            <img src="https://modo3.com/thumbs/fit630x300/20145/1577797281/%D9%85%D8%A7_%D8%A7%D8%AC%D8%B1_%D9%83%D8%A7%D9%81%D9%84_%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D9%85.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title translate15">Sponsor an orphan child</h5>
+              <p class="card-text translate16">You can only pay 1 AED to sponsor an orphan child
+              </p>
+              <div style="text-align: center;">
+                <label for="amount" class="col-form-label translate9" style="display: inline-block;">Donation amount</label>
+                <input type="number" class="form-control amount" name="amount" min="1" max="100000" style="width: 5em; margin-left: 10px; margin-bottom: 10px; display: inline-block;">
+                <button type="submit" id="c4" class="btn btn-primary btn1 translate10" style="vertical-align: top;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" id="btn2" class="btn btn-primary translate17">Show more</button>
+      </div>
+      
+
+      <!--Footer Section-->
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          
+          <div>
+            <a href="#" class="noClick social">
+              <img src="logo.png" alt="" width="40" height="36">
+            </a>
+            <p class="" style="display: inline;">© 2022 Khare, Inc</p>
+          </div>
+          
+      
+          <ul class="nav col-md-4 justify-content-end" style="align-items: center;">
+            <li class="nav-item translate18"><a href="#" class="nav-link px-2 text-muted">Back to Top</a></li>
+            <li class="nav-item translate19"><a href="Contact.html" class="nav-link px-2 text-muted">Contact Us</a></li>
+            <li class="nav-item translate20 noClick"><a href="#" class="nav-link px-2 text-muted">Follow Us:</a></li>
+            <li class="nav-item social" ><a href="https://z-upload.facebook.com/khaleejtimes/posts/10159103164862864" class="fa fa-facebook"></a></li>
+            <li class="nav-item social" ><a href="https://twitter.com/rqsharjah?lang=en" class="fa fa-twitter"></a></li>
+            <li class="nav-item social" ><a href="https://www.instagram.com/rqsharjah/?hl=en" class="fa fa-instagram"></a></li>
+          </ul>
+        </footer>
+      </div>
+
+      <!--Script for our bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <!--Jquery script for show more and alerts-->
+        <script>
+
+        $(function() {
+        
+            var amount = document.getElementById
+
+            $("#btn2").on("click", function() {
+            $(".hid").fadeIn(2000);
+            $("#btn2").hide();
+            });
+            
+            $(".btn1").on("click", function() {
+              //getting the donation amount
+              var amount = $(this).prev().val();
+
+              //Checking if the amount is valid
+              if(amount > 0) {
+                $("#success-alert").html("Thank you for your " + amount + " AED donation");
+                $("#success-alert").fadeTo(2000, 500).slideUp(1000, function() {
+                    $("#success-alert").slideUp(1000);
+                });
+              } else {
+                $("#fail-alert").html("Invalid Donation Amount");
+                $("#fail-alert").fadeTo(2000, 500).slideUp(1000, function() {
+                    $("#fail-alert").slideUp(1000);
+                });
+              }
+              
+            });
+
+        });
+        </script>
+
+    </body>
+</html>
